@@ -1,5 +1,7 @@
 {
   "orgName": "Demo Company",
   "edition": "Developer",
+  "country": "JP",
+  "language": "ja",
   "features": []
 }
