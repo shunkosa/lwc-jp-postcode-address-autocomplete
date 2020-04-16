@@ -7,12 +7,15 @@ export default class ExampleForm extends LightningElement {
 
     handlePostalCodeChange(event) {
         this.postalCode = event.target.value;
-        if (!this.postalCode || this.postalCode.length !== 7) {
+        if (!this.postalCode || !event.target.checkValidity()) {
             return;
         }
         fetch(`https://yubinbango.github.io/yubinbango-data/data/${this.postalCode.substring(0,3)}.js`)
             .then(response => {
-                return response.text();
+                if(response.ok) {
+                    return response.text();
+                }
+                throw new Error();
             })
             .then(result => {
                 const addressMap = JSON.parse(result.replace('$yubin(','').replace(');',''));
@@ -22,5 +25,6 @@ export default class ExampleForm extends LightningElement {
                     this.address = prefecture + addressData.slice(1).join('');
                 }
             })
+            .catch(error => {});
     }
 }

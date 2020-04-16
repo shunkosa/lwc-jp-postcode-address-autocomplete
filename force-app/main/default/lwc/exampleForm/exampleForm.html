@@ -3,7 +3,7 @@
         <div class="slds-p-horizontal_small">
             <lightning-layout>
                 <lightning-layout-item size="6">
-                    <lightning-input label="郵便番号" type="text" max-length="7" value={postalCode} onchange={handlePostalCodeChange}></lightning-input>
+                    <lightning-input label="郵便番号" pattern="[0-9]{7}" type="text" max-length="7" value={postalCode} onchange={handlePostalCodeChange}></lightning-input>
                 </lightning-layout-item>
             </lightning-layout>
             <lightning-layout>
