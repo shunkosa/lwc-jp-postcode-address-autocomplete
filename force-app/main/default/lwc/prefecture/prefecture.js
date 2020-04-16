@@ -13,7 +13,7 @@ export default function Prefectures() {
     "埼玉県",
     "千葉県",
     "東京都",
-    "神奈川",
+    "神奈川県",
     "新潟県",
     "富山県",
     "石川県",
@@ -29,7 +29,7 @@ export default function Prefectures() {
     "大阪府",
     "兵庫県",
     "奈良県",
-    "和歌山",
+    "和歌山県",
     "鳥取県",
     "島根県",
     "岡山県",
@@ -45,7 +45,7 @@ export default function Prefectures() {
     "熊本県",
     "大分県",
     "宮崎県",
-    "鹿児島",
+    "鹿児島県",
     "沖縄県"
     ];
 }
