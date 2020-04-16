@@ -1,14 +1,21 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
-    },
-    {
-      "path": "example"
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "flow-postalcode-lwc-jp",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "example"
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "48.0",
+    "packageAliases": {
+        "flow-postalcode-lwc-jp": "0Hof4000000fxX1CAI",
+        "flow-postalcode-lwc-jp@0.1.0-1": "04tf4000004To5PAAS"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "48.0"
 }
