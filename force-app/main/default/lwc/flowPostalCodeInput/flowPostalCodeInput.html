@@ -1,0 +1,51 @@
+<template>
+    <!--住所が1つの項目のとき-->
+    <template if:false={useMultipleAddressFields}>
+        <lightning-input
+            label="郵便番号"
+            pattern={pattern}
+            message-when-pattern-mismatch={invalidPatternMessage}
+            type="text"
+            value={postalCode}
+            max-length={maxLength}
+            onchange={handlePostalCodeChange}>
+        </lightning-input>
+        <lightning-input
+            name="address"
+            label="住所"
+            value={address}
+            onchange={handleValueChange}>
+        </lightning-input>
+    </template>
+
+    <!--住所が複数の項目のとき-->
+    <template if:true={useMultipleAddressFields}>
+        <lightning-input
+            label="郵便番号"
+            pattern={pattern}
+            message-when-pattern-mismatch={invalidPatternMessage}
+            type="text"
+            value={postalCode}
+            max-length={maxLength}
+            onchange={handlePostalCodeChange}>
+        </lightning-input>
+        <lightning-input
+            name="prefecture"
+            label="都道府県"
+            value={prefecture}
+            onchange={handleValueChange}>
+        </lightning-input>
+        <lightning-input
+            name="city"
+            label="市区町村"
+            value={city}
+            onchange={handleValueChange}>
+        </lightning-input>
+        <lightning-input
+            name="street"
+            label="町目・番地"
+            value={street}
+            onchange={handleValueChange}>
+        </lightning-input>
+    </template>
+</template>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>郵便番号から住所入力</masterLabel>
+    <description>Lightning フローで利用できる住所入力補助コンポーネントです。</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="hasHyphen" label="ハイフンあり" type="Boolean" role="inputOnly" default="false" description="ハイフンを含める場合は True を設定します。" />
+            <property name="useMultipleAddressFields" label="複数の住所項目" type="Boolean" role="inputOnly" default="false" description="住所を複数の項目に分ける場合は True を設定します。" />
+            <property name="postalCode" label="郵便番号" type="String" role="outputOnly" />
+            <property name="address" label="住所 (単一項目で有効)" type="String" role="outputOnly" />
+            <property name="prefecture" label="都道府県 (複数項目で有効)" type="String" role="outputOnly" />
+            <property name="city" label="市区町村 (複数項目で有効)" type="String" role="outputOnly" />
+            <property name="street" label="町目・番地 (複数項目で有効)" type="String" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
