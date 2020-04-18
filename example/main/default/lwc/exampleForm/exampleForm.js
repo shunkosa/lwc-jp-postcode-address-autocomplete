@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-import Prefectures from 'c/prefecture';
+import Prefectures from './prefecture';
 
 export default class ExampleForm extends LightningElement {
     postalCode;
