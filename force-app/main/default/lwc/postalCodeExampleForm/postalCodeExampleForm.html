@@ -1,0 +1,27 @@
+<template>
+  <lightning-card icon-name="standard:address" title="住所入力フォーム">
+    <div class="slds-p-horizontal_small">
+      <lightning-layout>
+        <lightning-layout-item size="6">
+          <lightning-input
+            label="郵便番号"
+            pattern="[0-9]{7}"
+            type="text"
+            max-length="7"
+            value={postalCode}
+            onchange={handlePostalCodeChange}
+          ></lightning-input>
+        </lightning-layout-item>
+      </lightning-layout>
+      <lightning-layout>
+        <lightning-layout-item size="12">
+          <lightning-input
+            label="住所"
+            type="text"
+            value={address}
+          ></lightning-input>
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>
+  </lightning-card>
+</template>

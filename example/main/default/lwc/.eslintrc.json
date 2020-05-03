@@ -1,6 +1,0 @@
-{
-  "extends": ["@salesforce/eslint-config-lwc/recommended"],
-  "rules": {
-    "no-unused-vars": "warn"
-  }
-}
